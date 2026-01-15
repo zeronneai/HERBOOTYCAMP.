@@ -5,14 +5,14 @@ const FloatingChatButton: React.FC<FloatingChatButtonProps> = ({ onToggleChat, i
   return (
     <button
       onClick={onToggleChat}
-      className={`fixed bottom-6 left-6 z-40 w-16 h-16 bg-primary-black text-soft-white rounded-full flex items-center justify-center shadow-xl border-2 ${
-        isChatOpen ? 'border-gray-500' : 'border-accent-pink'
-      } hover:bg-gray-800 transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-pink focus:ring-opacity-75 animate-button-pulse`}
+      className={`fixed bottom-6 left-6 z-40 w-16 h-16 bg-primary-sage text-soft-beige rounded-full flex items-center justify-center shadow-xl border-2 ${
+        isChatOpen ? 'border-subtle-sage-dark' : 'border-accent-pink'
+      } hover:bg-light-sage transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-pink focus:ring-opacity-75 animate-button-pulse`}
       aria-label={isChatOpen ? "Close chat" : "Open chat"}
     >
       {/* Chat bubble icon */}
       <svg
-        className={`w-8 h-8 ${isChatOpen ? 'text-gray-400' : 'text-accent-pink'}`}
+        className={`w-8 h-8 ${isChatOpen ? 'text-subtle-sage-dark' : 'text-accent-pink'}`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

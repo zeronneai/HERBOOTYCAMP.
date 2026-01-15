@@ -101,18 +101,18 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed bottom-24 left-6 z-50 w-80 h-[480px] bg-gray-900 border border-gray-700 rounded-lg shadow-2xl flex flex-col transform transition-all duration-300 ease-in-out animate-fade-in-up"
+      className="fixed bottom-24 left-6 z-50 w-80 h-[480px] bg-primary-sage border border-subtle-sage-dark rounded-lg shadow-2xl flex flex-col transform transition-all duration-300 ease-in-out animate-fade-in-up"
       role="dialog"
       aria-modal="true"
       aria-labelledby="chat-title"
     >
-      <div className="flex justify-between items-center p-4 border-b border-gray-700">
+      <div className="flex justify-between items-center p-4 border-b border-subtle-sage-dark">
         <h3 id="chat-title" className="font-headline text-accent-pink text-xl"> {/* Changed title color to accent-pink */}
           HER BOOTYCAMP Chat
         </h3>
         <button
           onClick={onClose}
-          className="text-soft-white hover:text-accent-pink text-3xl font-light leading-none focus:outline-none"
+          className="text-soft-beige hover:text-accent-pink text-3xl font-light leading-none focus:outline-none"
           aria-label="Close chat"
         >
           &times;
@@ -128,8 +128,8 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ isOpen, onClose }) => {
             <div
               className={`max-w-[80%] p-3 rounded-lg shadow ${
                 msg.sender === 'user'
-                  ? 'bg-accent-pink text-soft-white'
-                  : 'bg-gray-800 text-gray-200'
+                  ? 'bg-accent-pink text-soft-beige'
+                  : 'bg-light-sage text-soft-beige'
               }`}
             >
               <p className="text-sm font-body">{msg.text}</p>
@@ -139,7 +139,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ isOpen, onClose }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-subtle-sage-dark">
         {isNameCollected && (
           <div className="grid grid-cols-1 gap-2 mb-3">
             <Button onClick={() => handleOptionClick('What is HER BOOTYCAMP?')} className="w-full text-sm py-2" variant="outline">
@@ -159,12 +159,12 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ isOpen, onClose }) => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder={isNameCollected ? 'Ask me anything...' : 'Type your name...'}
-            className="flex-1 p-2 rounded-l-md bg-gray-800 border border-gray-600 text-soft-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-accent-pink"
+            className="flex-1 p-2 rounded-l-md bg-light-sage border border-subtle-sage-dark text-soft-beige placeholder-soft-beige-dark focus:outline-none focus:ring-1 focus:ring-accent-pink"
             aria-label={isNameCollected ? "Your message input" : "Your name input"}
           />
           <button
             type="submit"
-            className="bg-accent-pink text-soft-white p-2 rounded-r-md hover:bg-accent-pink-light transition-colors"
+            className="bg-accent-pink text-soft-beige p-2 rounded-r-md hover:bg-accent-pink-light transition-colors"
             aria-label="Send message"
           >
             {isNameCollected ? 'Send' : 'Start Chat'}

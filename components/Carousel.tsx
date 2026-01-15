@@ -23,7 +23,7 @@ const TestimonialOverlay: React.FC<TestimonialOverlayProps> = ({ item, isActive 
     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
       {/* Background layer for darkening the image, fades in/out with showContent */}
       <div
-        className={`absolute inset-0 bg-primary-black transition-opacity duration-500 ease-in-out ${
+        className={`absolute inset-0 bg-primary-sage transition-opacity duration-500 ease-in-out ${
           showContent ? 'opacity-70' : 'opacity-0' // Changed from opacity-30 to 0 if initial is meant to be clearer.
         }`}
       ></div>
@@ -34,7 +34,7 @@ const TestimonialOverlay: React.FC<TestimonialOverlayProps> = ({ item, isActive 
           showContent ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <p className="font-accent italic text-2xl md:text-3xl text-soft-white leading-relaxed mb-4 max-w-2xl">
+        <p className="font-accent italic text-2xl md:text-3xl text-soft-beige leading-relaxed mb-4 max-w-2xl">
           "{item.testimonial}"
         </p>
         <p className="font-body text-lg font-semibold text-accent-pink">

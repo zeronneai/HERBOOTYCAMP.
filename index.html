@@ -11,21 +11,22 @@
     <style>
         /* Custom Tailwind Configuration */
         :root {
-            --color-primary-black: #1A1A1A;
-            --color-soft-white: #F5F5F5;
-            --color-accent-pink: #EC4899; /* Tailwind pink-500 */
-            --color-accent-pink-light: #F472B6; /* Tailwind pink-400 */
-            --color-accent-pink-dark: #BE185D; /* Tailwind pink-700 */
-            --color-subtle-gray-dark: #2A2A2A; /* For subtle gradients */
-            --color-subtle-pink: #A0306A; /* Darker, desaturated pink for subtle effects */
+            --color-primary-sage: #4A5F54; /* Replaced primary-black */
+            --color-light-sage: #6B8678; /* New, lighter sage for secondary backgrounds */
+            --color-subtle-sage-dark: #3C4D44; /* Replaced subtle-gray-dark */
+            --color-soft-beige: #F2EFE9; /* Replaced soft-white */
+            --color-accent-pink: #EC4899; /* Tailwind pink-500 - unchanged */
+            --color-accent-pink-light: #F472B6; /* Tailwind pink-400 - unchanged */
+            --color-accent-pink-dark: #BE185D; /* Tailwind pink-700 - unchanged */
+            --color-subtle-pink: #A0306A; /* Darker, desaturated pink for subtle effects - unchanged */
         }
         html {
             scroll-behavior: smooth;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--color-primary-black);
-            color: var(--color-soft-white);
+            background-color: var(--color-primary-sage); /* Changed from primary-black */
+            color: var(--color-soft-beige); /* Changed from soft-white */
             overflow-x: hidden; /* Prevent horizontal scroll from animations */
         }
         .font-headline {
@@ -72,7 +73,7 @@
         }
 
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: var(--color-primary-black);
+          background: var(--color-primary-sage); /* Changed from primary-black */
           border-radius: 10px;
         }
 
@@ -165,12 +166,13 @@
         theme: {
             extend: {
                 colors: {
-                    'primary-black': 'var(--color-primary-black)',
-                    'soft-white': 'var(--color-soft-white)',
+                    'primary-sage': 'var(--color-primary-sage)',
+                    'light-sage': 'var(--color-light-sage)',
+                    'subtle-sage-dark': 'var(--color-subtle-sage-dark)',
+                    'soft-beige': 'var(--color-soft-beige)',
                     'accent-pink': 'var(--color-accent-pink)',
                     'accent-pink-light': 'var(--color-accent-pink-light)',
                     'accent-pink-dark': 'var(--color-accent-pink-dark)',
-                    'subtle-gray-dark': 'var(--color-subtle-gray-dark)',
                     'subtle-pink': 'var(--color-subtle-pink)',
                 },
                 fontFamily: {

@@ -33,21 +33,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-primary-black bg-opacity-90 backdrop-blur-sm p-4 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-primary-sage bg-opacity-90 backdrop-blur-sm p-4 overflow-y-auto"
       onClick={handleOverlayClick}
     >
       <div
         ref={modalRef}
-        className="relative bg-gray-800 p-8 rounded-lg shadow-2xl max-w-lg w-full transform transition-all duration-300 scale-100 opacity-100 animate-fade-in-up"
+        className="relative bg-light-sage p-8 rounded-lg shadow-2xl max-w-lg w-full transform transition-all duration-300 scale-100 opacity-100 animate-fade-in-up"
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-soft-white hover:text-accent-pink text-3xl font-light leading-none focus:outline-none"
+          className="absolute top-4 right-4 text-soft-beige hover:text-accent-pink text-3xl font-light leading-none focus:outline-none"
           aria-label="Close modal"
         >
           &times;
         </button>
-        {title && <h2 className="font-headline text-soft-white text-4xl mb-6 text-center">{title}</h2>}
+        {title && <h2 className="font-headline text-soft-beige text-4xl mb-6 text-center">{title}</h2>}
         {children}
       </div>
     </div>

@@ -1,3 +1,6 @@
+// Add missing import for React to resolve React.ReactNode types
+import React from 'react';
+
 export interface SignupFormFields {
   name: string;
   email: string;

@@ -82,7 +82,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary-black text-soft-white font-body">
+    <div className="min-h-screen bg-primary-sage text-soft-beige font-body">
       {!isPageLoaded && <Preloader onLoaded={handlePreloaderLoaded} />}
 
       {isPageLoaded && (
@@ -113,7 +113,7 @@ const App: React.FC = () => {
               <div
                 className="absolute bottom-0 left-0 right-0 h-[100px] z-10"
                 style={{
-                  background: 'linear-gradient(to top, var(--color-accent-pink) 0%, transparent 80%)',
+                  background: 'linear-gradient(to top, var(--color-light-sage) 0%, transparent 80%)',
                   filter: 'blur(20px)',
                   opacity: '0.3', // Adjustable
                   animation: 'bottom-glow-pulse 6s ease-in-out infinite alternate',
@@ -124,7 +124,7 @@ const App: React.FC = () => {
               <div
                 className="absolute inset-y-0 w-[200vw] h-full z-15"
                 style={{
-                  background: 'linear-gradient(to right, transparent, var(--color-accent-pink) 15%, var(--color-accent-pink) 85%, transparent)',
+                  background: 'linear-gradient(to right, transparent, var(--color-light-sage) 15%, var(--color-light-sage) 85%, transparent)',
                   filter: 'blur(35px)',
                   opacity: '0.1',
                   animation: 'light-sweep 40s linear infinite',
@@ -136,7 +136,7 @@ const App: React.FC = () => {
               <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full z-20"
                 style={{
-                  background: 'radial-gradient(circle, var(--color-accent-pink) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle, var(--color-light-sage) 0%, transparent 70%)',
                   filter: 'blur(100px)',
                   opacity: '0.2',
                   animation: 'pulse-glow 5s ease-in-out infinite alternate',
@@ -145,7 +145,7 @@ const App: React.FC = () => {
 
               {/* Layer 4: Darker Overlay for Text Readability (z-index: 30) */}
               <div className="absolute inset-0 z-30 opacity-40"
-                   style={{ background: 'radial-gradient(circle at top left, var(--subtle-pink) 0%, transparent 40%), radial-gradient(circle at bottom right, var(--subtle-gray-dark) 0%, transparent 50%)',
+                   style={{ background: 'radial-gradient(circle at top left, var(--subtle-pink) 0%, transparent 40%), radial-gradient(circle at bottom right, var(--subtle-sage-dark) 0%, transparent 50%)',
                             backgroundSize: '200% 200%',
                             animation: 'gradient-bg 25s ease-in-out infinite alternate'
                    }}>
@@ -159,7 +159,7 @@ const App: React.FC = () => {
                   </h1>
                 </RevealOnScroll>
                 <RevealOnScroll delay={300}>
-                  <p className="font-accent text-3xl sm:text-4xl md:text-5xl italic text-soft-white mt-4 mb-8">
+                  <p className="font-accent text-3xl sm:text-4xl md:text-5xl italic text-soft-beige mt-4 mb-8">
                     Unleash the <span className="text-accent-pink">HER</span> within.
                   </p>
                 </RevealOnScroll>
@@ -220,7 +220,7 @@ const App: React.FC = () => {
             </section>
 
             {/* Features Section */}
-            <section className="bg-gray-900 py-24 px-4 md:px-8">
+            <section className="bg-primary-sage py-24 px-4 md:px-8">
               <div className="max-w-6xl mx-auto">
                 <RevealOnScroll>
                   <h2 className="font-headline text-4xl sm:text-5xl text-center mb-16 uppercase">
@@ -229,28 +229,28 @@ const App: React.FC = () => {
                 </RevealOnScroll>
                 <div className="grid md:grid-cols-3 gap-10">
                   <RevealOnScroll>
-                    <div className="text-center p-8 border-2 border-gray-700 rounded-xl hover:border-accent-pink transition-all duration-300">
+                    <div className="text-center p-8 border-2 border-subtle-sage-dark rounded-xl hover:border-accent-pink transition-all duration-300">
                       <span className="text-accent-pink text-5xl mb-4 block">💪</span>
                       <h3 className="font-headline text-2xl uppercase mb-3">Targeted Workouts</h3>
-                      <p className="text-md leading-relaxed text-gray-300">
+                      <p className="text-md leading-relaxed text-soft-beige">
                         Sculpt and strengthen your glutes, legs, and core with expertly designed routines.
                       </p>
                     </div>
                   </RevealOnScroll>
                   <RevealOnScroll delay={150}>
-                    <div className="text-center p-8 border-2 border-gray-700 rounded-xl hover:border-accent-pink transition-all duration-300">
+                    <div className="text-center p-8 border-2 border-subtle-sage-dark rounded-xl hover:border-accent-pink transition-all duration-300">
                       <span className="text-accent-pink text-5xl mb-4 block">💖</span>
                       <h3 className="font-headline text-2xl uppercase mb-3">Empowering Community</h3>
-                      <p className="text-md leading-relaxed text-gray-300">
+                      <p className="text-md leading-relaxed text-soft-beige">
                         Join a sisterhood of strong women supporting each other every step of the way.
                       </p>
                     </div>
                   </RevealOnScroll>
                   <RevealOnScroll delay={300}>
-                    <div className="text-center p-8 border-2 border-gray-700 rounded-xl hover:border-accent-pink transition-all duration-300">
+                    <div className="text-center p-8 border-2 border-subtle-sage-dark rounded-xl hover:border-accent-pink transition-all duration-300">
                       <span className="text-accent-pink text-5xl mb-4 block">🔥</span>
                       <h3 className="font-headline text-2xl uppercase mb-3">Ignite Confidence</h3>
-                      <p className="text-md leading-relaxed text-gray-300">
+                      <p className="text-md leading-relaxed text-soft-beige">
                         Discover your inner strength and radiate confidence both inside and out.
                       </p>
                     </div>
@@ -340,12 +340,12 @@ const App: React.FC = () => {
             {/* Call to Action Section */}
             <section className="bg-accent-pink py-24 px-4 md:px-8 text-center">
               <RevealOnScroll>
-                <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl uppercase text-soft-white mb-8">
+                <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl uppercase text-soft-beige mb-8">
                   Ready to Feel <span className="font-accent italic">Phenomenal?</span>
                 </h2>
               </RevealOnScroll>
               <RevealOnScroll delay={200}>
-                <p className="text-xl md:text-2xl font-semibold text-soft-white mb-10">
+                <p className="text-xl md:text-2xl font-semibold text-soft-beige mb-10">
                   Don't wait another day to start your journey. Spaces are limited!
                 </p>
               </RevealOnScroll>
@@ -358,7 +358,7 @@ const App: React.FC = () => {
           </main>
 
           {/* Footer */}
-          <footer className="bg-primary-black py-12 text-center text-gray-400">
+          <footer className="bg-primary-sage py-12 text-center text-soft-beige">
             <p>&copy; {new Date().getFullYear()} LesLiveFit. All rights reserved.</p>
             <p className="mt-2 text-sm">Empowering HER Transformation.</p>
             <div className="flex justify-center space-x-6 mt-6">
@@ -367,7 +367,7 @@ const App: React.FC = () => {
                 href="https://www.instagram.com/leslivefit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 border-2 border-gray-700 rounded-full text-gray-400 hover:border-accent-pink hover:text-accent-pink transition-colors"
+                className="flex items-center justify-center w-10 h-10 border-2 border-subtle-sage-dark rounded-full text-soft-beige hover:border-accent-pink hover:text-accent-pink transition-colors"
                 aria-label="Follow us on Instagram"
               >
                 <svg
@@ -391,7 +391,7 @@ const App: React.FC = () => {
                 href="https://www.tiktok.com/@leslivefit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 border-2 border-gray-700 rounded-full text-gray-400 hover:border-accent-pink hover:text-accent-pink transition-colors"
+                className="flex items-center justify-center w-10 h-10 border-2 border-subtle-sage-dark rounded-full text-soft-beige hover:border-accent-pink hover:text-accent-pink transition-colors"
                 aria-label="Follow us on TikTok"
               >
                 <svg
@@ -413,7 +413,7 @@ const App: React.FC = () => {
               {/* Email */}
               <a
                 href="mailto:leslivefitcollabs@gmail.com"
-                className="flex items-center justify-center w-10 h-10 border-2 border-gray-700 rounded-full text-gray-400 hover:border-accent-pink hover:text-accent-pink transition-colors"
+                className="flex items-center justify-center w-10 h-10 border-2 border-subtle-sage-dark rounded-full text-soft-beige hover:border-accent-pink hover:text-accent-pink transition-colors"
                 aria-label="Email us"
               >
                 <svg
@@ -443,10 +443,10 @@ const App: React.FC = () => {
             {showSignupSuccess ? (
               <div className="text-center py-8">
                 <p className="text-6xl mb-6">🍑</p>
-                <h3 className="font-accent text-3xl italic text-soft-white mb-4">
+                <h3 className="font-accent text-3xl italic text-soft-beige mb-4">
                   ¡Increíble! Tu viaje hacia una tú más fuerte y confiada ha comenzado.
                 </h3>
-                <p className="text-lg text-gray-300">
+                <p className="text-lg text-soft-beige">
                   ¡Prepárate para brillar!
                 </p>
               </div>
@@ -465,7 +465,7 @@ const App: React.FC = () => {
                 className="space-y-6"
               >
                 <div>
-                  <label htmlFor="name" className="block text-soft-white text-lg font-semibold mb-2">
+                  <label htmlFor="name" className="block text-soft-beige text-lg font-semibold mb-2">
                     Full Name
                   </label>
                   <input
@@ -473,12 +473,12 @@ const App: React.FC = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-soft-white focus:ring-accent-pink focus:border-accent-pink"
+                    className="w-full p-3 bg-light-sage border border-subtle-sage-dark rounded-md text-soft-beige focus:ring-accent-pink focus:border-accent-pink"
                     placeholder="Jane Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-soft-white text-lg font-semibold mb-2">
+                  <label htmlFor="email" className="block text-soft-beige text-lg font-semibold mb-2">
                     Email Address
                   </label>
                   <input
@@ -486,12 +486,12 @@ const App: React.FC = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-soft-white focus:ring-accent-pink focus:border-accent-pink"
+                    className="w-full p-3 bg-light-sage border border-subtle-sage-dark rounded-md text-soft-beige focus:ring-accent-pink focus:border-accent-pink"
                     placeholder="jane.doe@example.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="whatsappNumber" className="block text-soft-white text-lg font-semibold mb-2">
+                  <label htmlFor="whatsappNumber" className="block text-soft-beige text-lg font-semibold mb-2">
                     WhatsApp Number
                   </label>
                   <input
@@ -499,12 +499,12 @@ const App: React.FC = () => {
                     id="whatsappNumber"
                     name="whatsappNumber"
                     required
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-soft-white focus:ring-accent-pink focus:border-accent-pink"
+                    className="w-full p-3 bg-light-sage border border-subtle-sage-dark rounded-md text-soft-beige focus:ring-accent-pink focus:border-accent-pink"
                     placeholder="+1234567890"
                   />
                 </div>
                 <div>
-                  <label htmlFor="goal" className="block text-soft-white text-lg font-semibold mb-2">
+                  <label htmlFor="goal" className="block text-soft-beige text-lg font-semibold mb-2">
                     What do you want to achieve in this course?
                   </label>
                   <textarea
@@ -512,7 +512,7 @@ const App: React.FC = () => {
                     name="goal"
                     rows={4}
                     required
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-soft-white focus:ring-accent-pink focus:border-accent-pink"
+                    className="w-full p-3 bg-light-sage border border-subtle-sage-dark rounded-md text-soft-beige focus:ring-accent-pink focus:border-accent-pink"
                     placeholder="e.g., Build stronger glutes, gain confidence, tone my body..."
                   ></textarea>
                 </div>

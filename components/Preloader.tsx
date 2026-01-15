@@ -31,12 +31,12 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoaded }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-primary-black z-[9999] flex flex-col items-center justify-center transition-opacity duration-800 ease-out ${
+      className={`fixed inset-0 bg-primary-sage z-[9999] flex flex-col items-center justify-center transition-opacity duration-800 ease-out ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <h1
-        className={`font-headline text-soft-white text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 transition-all duration-700 ease-in-out transform ${
+        className={`font-headline text-soft-beige text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 transition-all duration-700 ease-in-out transform ${
           showLesLiveFit ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}
       >
