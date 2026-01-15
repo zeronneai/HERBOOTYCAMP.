@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HER BOOTYCAMP | LesLiveFit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration */
+        :root {
+            --color-primary-black: #1A1A1A;
+            --color-soft-white: #F5F5F5;
+            --color-accent-pink: #EC4899; /* Tailwind pink-500 */
+            --color-accent-pink-light: #F472B6; /* Tailwind pink-400 */
+            --color-accent-pink-dark: #BE185D; /* Tailwind pink-700 */
+            --color-subtle-gray-dark: #2A2A2A; /* For subtle gradients */
+            --color-subtle-pink: #A0306A; /* Darker, desaturated pink for subtle effects */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary-black);
+            color: var(--color-soft-white);
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+        .font-headline {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .font-accent {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-preloader-subtitle { /* New class for the preloader subtitle */
+            font-family: 'Inter', sans-serif;
+            font-weight: 600; /* Semi-bold for emphasis but still minimal */
+        }
+        .text-accent-pink {
+            color: var(--color-accent-pink);
+        }
+        .bg-accent-pink {
+            background-color: var(--color-accent-pink);
+        }
+        .border-accent-pink {
+            border-color: var(--color-accent-pink);
+        }
+        .hover\:bg-accent-pink-light:hover {
+            background-color: var(--color-accent-pink-light);
+        }
+        .hover\:text-accent-pink-light:hover {
+            color: var(--color-accent-pink-light);
+        }
+        .preloader-hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+        }
+        .preloader-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Custom scrollbar for chat */
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: var(--color-primary-black);
+          border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: var(--color-accent-pink);
+          border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: var(--color-accent-pink-light);
+        }
+
+        /* Micro-animations */
+        @keyframes gradient-bg-animation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        @keyframes button-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0px rgba(var(--color-accent-pink), 0.7);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 10px rgba(var(--color-accent-pink), 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0px rgba(var(--color-accent-pink), 0.7);
+            }
+        }
+
+        @keyframes float-light {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+            33% { transform: translate(20px, 30px) scale(1.1); opacity: 0.8; }
+            66% { transform: translate(-10px, -20px) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+        }
+
+        @keyframes light-sweep {
+            0% { transform: translateX(-150%); } /* Start far left, outside view */
+            100% { transform: translateX(150%); } /* End far right, outside view */
+        }
+
+        @keyframes image-grid-scroll {
+            0% { transform: translateY(0%); }
+            100% { transform: translateY(-50%); } /* Scrolls half its total height to loop seamlessly */
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.05); opacity: 0.3; }
+            100% { transform: scale(1); opacity: 0.2; }
+        }
+
+        @keyframes bottom-glow-pulse {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.45; }
+            100% { opacity: 0.3; }
+        }
+
+        /* Particle animations */
+        @keyframes particle-float-x {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50px); }
+        }
+        @keyframes particle-float-y {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+        @keyframes particle-fade {
+            0% { opacity: 0.6; } /* Increased from 0.4 to ensure stronger visibility */
+            50% { opacity: 1.0; } /* Increased from 0.8 to ensure max brightness */
+            100% { opacity: 0.6; } /* Increased from 0.4 to ensure stronger visibility */
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary-black': 'var(--color-primary-black)',
+                    'soft-white': 'var(--color-soft-white)',
+                    'accent-pink': 'var(--color-accent-pink)',
+                    'accent-pink-light': 'var(--color-accent-pink-light)',
+                    'accent-pink-dark': 'var(--color-accent-pink-dark)',
+                    'subtle-gray-dark': 'var(--color-subtle-gray-dark)',
+                    'subtle-pink': 'var(--color-subtle-pink)',
+                },
+                fontFamily: {
+                    headline: ['Bebas Neue', 'sans-serif'],
+                    accent: ['Playfair Display', 'serif'],
+                    body: ['Inter', 'sans-serif'],
+                    'preloader-subtitle': ['Inter', 'sans-serif'],
+                },
+                animation: {
+                    'gradient-bg': 'gradient-bg-animation 25s ease-in-out infinite alternate',
+                    'button-pulse': 'button-pulse 2s ease-in-out infinite',
+                    'float-light-1': 'float-light 20s ease-in-out infinite alternate',
+                    'float-light-2': 'float-light 25s ease-in-out infinite alternate-reverse 2s',
+                    'float-light-3': 'float-light 18s linear infinite alternate 1s',
+                    'light-sweep': 'light-sweep 40s linear infinite',
+                    'image-grid-scroll': 'image-grid-scroll 60s linear infinite',
+                    'pulse-glow': 'pulse-glow 5s ease-in-out infinite alternate',
+                    'bottom-glow-pulse': 'bottom-glow-pulse 6s ease-in-out infinite alternate',
+                    'particle-float-x': 'particle-float-x var(--duration-float-x) ease-in-out var(--delay-float-x) infinite alternate',
+                    'particle-float-y': 'particle-float-y var(--duration-float-y) ease-in-out var(--delay-float-y) infinite alternate',
+                    'particle-fade': 'particle-fade var(--duration-fade) ease-in-out var(--delay-fade) infinite alternate',
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

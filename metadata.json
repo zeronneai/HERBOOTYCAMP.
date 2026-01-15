@@ -1,0 +1,7 @@
+{
+  "name": "HERBOOTYCAMP OK",
+  "description": "High-conversion landing page for LesLiveFit's HER BOOTYCAMP women's fitness program, designed for Instagram/TikTok traffic.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
